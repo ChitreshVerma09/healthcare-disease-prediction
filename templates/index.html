@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Healthcare Disease Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Healthcare Disease Prediction</h1>
+
+    <form method="POST">
+        <input type="number" name="preg" placeholder="Pregnancies" required>
+        <input type="number" name="glu" placeholder="Glucose" required>
+        <input type="number" name="bp" placeholder="Blood Pressure" required>
+        <input type="number" name="skin" placeholder="Skin Thickness" required>
+        <input type="number" name="ins" placeholder="Insulin" required>
+        <input type="number" step="0.1" name="bmi" placeholder="BMI" required>
+        <input type="number" step="0.001" name="dpf" placeholder="Diabetes Pedigree Function" required>
+        <input type="number" name="age" placeholder="Age" required>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <h2>{{ result }}</h2>
+    {% endif %}
+</div>
+
+</body>
+</html>
